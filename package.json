@@ -1,0 +1,23 @@
+{
+  "name": "test_sender",
+  "version": "1.0.0",
+  "description": "gmail and outlook email sender",
+  "main": "index.js",
+  "scripts": {
+    "run": "nodemon ./src/server.js"
+  },
+  "keywords": [
+    "fetch",
+    "email",
+    "send"
+  ],
+  "author": "Eduardo Côrte Real Barbieri",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "node-fetch": "^2.0.0",
+    "nodemon": "^2.0.13"
+  }
+}
