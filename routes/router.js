@@ -21,9 +21,5 @@ router.post('/url_fetcher', async (req,res) => {
 			message:'try returning to the front page!'});
 	}
 });
-// router.post('/send_mail', async (req,res) => {
-// 	await mailer();
-// 	res.render('index');
-// });
 
 module.exports = router;
