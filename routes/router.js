@@ -1,19 +1,25 @@
 const express = require("express")
-const main = require("../fetch/fetch.js")
-const AsyncFunction = require("../fetch/fetch.js")
-const mailer = require("../fetch/mailer.js")
+const main = require("../microservices/fetch.js")
+const AsyncFunction = require("../microservices/fetch.js")
+const mailer = require("../microservices/mailer.js")
 
 router = express.Router()
 
 router.get('/', (req,res) => {
-	  res.render('index')
+	  res.status(200).render('index')
 });
 
 router.post('/url_fetcher', async (req,res) => {
-	const url = req.body.url //name in index.ejs input
-	var mail_text = await AsyncFunction.main(url);
-	await mailer(mail_text);
-	res.render('fetched');
+	try{
+		const url = req.body.url //name in index.ejs input
+		var mail_text = await AsyncFunction.main(url);
+		await mailer(mail_text);
+		res.status(202).render('fetched',{text:'HTML enviado', message:''});
+	}
+	catch(e){
+		res.status(404).render('fetched',{text:'Oops, we have a problem', 
+			message:'try returning to the front page!'});
+	}
 });
 // router.post('/send_mail', async (req,res) => {
 // 	await mailer();
