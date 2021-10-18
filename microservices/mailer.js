@@ -13,7 +13,7 @@ async function mailer(mail_text){
 
 	var mailOptions = {
 	  from: 'dev.lopaper@gmail.com',
-	  to: 'dev.lopaper@gmail.com',
+	  to: ['dev.lopaper@gmail.com','dev.lopaper@outlook.com'],
 	  subject: 'Sending Email using Node.js[nodemailer]',
 	  text: "email de teste",
 	  html: mail_text
