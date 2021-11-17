@@ -6,14 +6,14 @@ async function mailer(mail_text){
 	  service: 'gmail',
 	  host: 'smtp.gmail.com',
 	  auth: {
-	    user: 'dev.lopaper@gmail.com',
-	    pass: 'XTy34#lM1!'
+	    user: '' //add origin email
+	    pass: '' //add password
 	  }
 	}));
 
 	var mailOptions = {
-	  from: 'dev.lopaper@gmail.com',
-	  to: ['dev.lopaper@gmail.com','dev.lopaper@outlook.com'],
+	  from: '' //add origin email,
+	  to: ['' ],//add destination.
 	  subject: 'Sending Email using Node.js[nodemailer]',
 	  text: "email de teste",
 	  html: mail_text

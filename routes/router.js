@@ -14,7 +14,7 @@ router.post('/url_fetcher', async (req,res) => {
 		const url = req.body.url //name in index.ejs input
 		var mail_text = await AsyncFunction.main(url);
 		await mailer(mail_text);
-		res.status(202).render('fetched',{text:'HTML enviado', message:''});
+		res.status(202).render('fetched',{text:'HTML sent', message:''});
 	}
 	catch(e){
 		res.status(404).render('fetched',{text:'Oops, we have a problem', 
