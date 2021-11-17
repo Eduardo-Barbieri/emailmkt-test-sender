@@ -12,7 +12,7 @@ async function mailer(mail_text){
 	}));
 
 	var mailOptions = {
-	  from: '' //add origin email,
+	  from: '', //add origin email.
 	  to: ['' ],//add destination.
 	  subject: 'Sending Email using Node.js[nodemailer]',
 	  text: "email de teste",
