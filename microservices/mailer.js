@@ -6,7 +6,7 @@ async function mailer(mail_text){
 	  service: 'gmail',
 	  host: 'smtp.gmail.com',
 	  auth: {
-	    user: '' //add origin email
+	    user: '', //add origin email
 	    pass: '' //add password
 	  }
 	}));
